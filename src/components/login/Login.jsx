@@ -31,7 +31,13 @@ const Login = () => {
                 alert("로그인성공!");
                 setLoading(false);
                 sessionStorage.setItem('email', email);
-                navi('/'); //home으로
+                sessionStorage.setItem('uid', success.user.uid);
+                if(sessionStorage.getItem('target')){
+                    navi(sessionStorage.getItem('target'));
+                }else{
+                    navi('/');
+                }
+                // navi('/'); //home으로
             })
             .catch(error=>{
                 alert("에러:" + error.message);

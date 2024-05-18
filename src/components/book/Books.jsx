@@ -4,7 +4,6 @@ import {Row, Col, Card, InputGroup, Form, Button} from 'react-bootstrap'
 import { FaCartPlus } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import { app } from '../../firebaseinit';
-import { } from 'firebase/database';
 import { getDatabase, ref, set, get } from 'firebase/database';
 
 const Books = () => {

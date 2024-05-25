@@ -10,6 +10,7 @@ import About from './About';
 import Locals from './local/Locals';
 import Favorite from './local/Favorite';
 import Join from './login/Join';
+import Mypage from './login/Mypage';
 
 
 const Menu = () => {
@@ -42,7 +43,7 @@ const Menu = () => {
                         </Nav>
                         {sessionStorage.getItem('email') ?
                             <Nav>
-                                <Nav.Link href="#">{sessionStorage.getItem('email')}</Nav.Link>
+                                <Nav.Link href="/mypage">{sessionStorage.getItem('email')}</Nav.Link>
                                 <Nav.Link href="#" onClick={onLogout}>로그아웃</Nav.Link>
                             </Nav>
                             :
@@ -61,6 +62,7 @@ const Menu = () => {
                 <Route path='/locals' element={<Locals />} />
                 <Route path='/favorite' element={<Favorite />} />
                 <Route path='/join' element={<Join />} />
+                <Route path='/mypage' element={<Mypage />} />
 
             </Routes>
         </>

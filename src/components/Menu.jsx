@@ -14,6 +14,7 @@ import Mypage from './login/Mypage';
 import ListPage from './bbs/ListPage';
 import InsertPage from './bbs/InsertPage';
 import ReadPage from './bbs/ReadPage';
+import Updatepage from './bbs/Updatepage';
 
 
 const Menu = () => {
@@ -70,6 +71,8 @@ const Menu = () => {
                 <Route path='/bbs' element={<ListPage />} />
                 <Route path='/bbs/insert' element={<InsertPage />} />
                 <Route path='/bbs/read/:id' element={<ReadPage />} />
+                <Route path='/bbs/update/:id' element={<Updatepage />} />
+
             </Routes>
         </>
     );
